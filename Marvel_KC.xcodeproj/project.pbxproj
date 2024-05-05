@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424771502BE1620B00E19380 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4247714F2BE1620B00E19380 /* Launch Screen.storyboard */; };
+		424885572BE2776D0099FA9E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885562BE2776D0099FA9E /* EndPoints.swift */; };
+		424885592BE277870099FA9E /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885582BE277870099FA9E /* HTTPMethods.swift */; };
+		4248855B2BE2779E0099FA9E /* HTTPResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248855A2BE2779E0099FA9E /* HTTPResponseCodes.swift */; };
+		4248855D2BE27E3D0099FA9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248855C2BE27E3D0099FA9E /* Constants.swift */; };
+		4248855F2BE297020099FA9E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248855E2BE297020099FA9E /* Hero.swift */; };
+		424885612BE2994B0099FA9E /* NetworkHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885602BE2994B0099FA9E /* NetworkHeros.swift */; };
+		424885632BE29F020099FA9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885622BE29F020099FA9E /* NetworkError.swift */; };
+		424885652BE2A0060099FA9E /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885642BE2A0060099FA9E /* HTTPHeader.swift */; };
+		424885672BE2BC300099FA9E /* URLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885662BE2BC300099FA9E /* URLResponse+Extension.swift */; };
+		424885692BE587A20099FA9E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885682BE587A20099FA9E /* AppState.swift */; };
+		4248856B2BE5886B0099FA9E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248856A2BE5886B0099FA9E /* RootViewModel.swift */; };
+		4248856D2BE58BA00099FA9E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248856C2BE58BA00099FA9E /* ErrorView.swift */; };
+		4248856F2BE58BB50099FA9E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248856E2BE58BB50099FA9E /* DetailView.swift */; };
 		42548FF32BE0321900708F15 /* Marvel_KCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42548FF22BE0321900708F15 /* Marvel_KCApp.swift */; };
 		42548FF72BE0321C00708F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42548FF62BE0321C00708F15 /* Assets.xcassets */; };
 		42548FFB2BE0321C00708F15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42548FFA2BE0321C00708F15 /* Preview Assets.xcassets */; };
@@ -34,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4247714F2BE1620B00E19380 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		424885562BE2776D0099FA9E /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		424885582BE277870099FA9E /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		4248855A2BE2779E0099FA9E /* HTTPResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodes.swift; sourceTree = "<group>"; };
+		4248855C2BE27E3D0099FA9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4248855E2BE297020099FA9E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		424885602BE2994B0099FA9E /* NetworkHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeros.swift; sourceTree = "<group>"; };
+		424885622BE29F020099FA9E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		424885642BE2A0060099FA9E /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		424885662BE2BC300099FA9E /* URLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Extension.swift"; sourceTree = "<group>"; };
+		424885682BE587A20099FA9E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4248856A2BE5886B0099FA9E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		4248856C2BE58BA00099FA9E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		4248856E2BE58BB50099FA9E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		42548FEF2BE0321900708F15 /* Marvel_KC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel_KC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42548FF22BE0321900708F15 /* Marvel_KCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_KCApp.swift; sourceTree = "<group>"; };
 		42548FF62BE0321C00708F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424885552BE2774B0099FA9E /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				424885562BE2776D0099FA9E /* EndPoints.swift */,
+				424885582BE277870099FA9E /* HTTPMethods.swift */,
+				4248855A2BE2779E0099FA9E /* HTTPResponseCodes.swift */,
+				424885622BE29F020099FA9E /* NetworkError.swift */,
+				424885642BE2A0060099FA9E /* HTTPHeader.swift */,
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
 		42548FE62BE0321900708F15 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +140,6 @@
 				4254901E2BE0326800708F15 /* Data */,
 				4254901D2BE0325D00708F15 /* Resources */,
 				42548FF22BE0321900708F15 /* Marvel_KCApp.swift */,
-				42548FF62BE0321C00708F15 /* Assets.xcassets */,
 				42548FF82BE0321C00708F15 /* Marvel_KC.entitlements */,
 				42548FF92BE0321C00708F15 /* Preview Content */,
 			);
@@ -135,6 +174,8 @@
 		4254901D2BE0325D00708F15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42548FF62BE0321C00708F15 /* Assets.xcassets */,
+				4247714F2BE1620B00E19380 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,6 +193,8 @@
 		4254901F2BE0326F00708F15 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				424885552BE2774B0099FA9E /* BaseNetwork */,
+				424885602BE2994B0099FA9E /* NetworkHeros.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -192,6 +235,7 @@
 		425490242BE032A300708F15 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4248855C2BE27E3D0099FA9E /* Constants.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -206,6 +250,7 @@
 		425490262BE032B200708F15 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				424885662BE2BC300099FA9E /* URLResponse+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +258,7 @@
 		425490272BE032BF00708F15 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				4248855E2BE297020099FA9E /* Hero.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -229,6 +275,8 @@
 		425490292BE032CF00708F15 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				424885682BE587A20099FA9E /* AppState.swift */,
+				4248856A2BE5886B0099FA9E /* RootViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				4254902B2BE0338F00708F15 /* HomeView.swift */,
+				4248856C2BE58BA00099FA9E /* ErrorView.swift */,
+				4248856E2BE58BB50099FA9E /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424771502BE1620B00E19380 /* Launch Screen.storyboard in Resources */,
 				42548FFB2BE0321C00708F15 /* Preview Assets.xcassets in Resources */,
 				42548FF72BE0321C00708F15 /* Assets.xcassets in Resources */,
 			);
@@ -371,8 +422,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424885592BE277870099FA9E /* HTTPMethods.swift in Sources */,
 				42548FF32BE0321900708F15 /* Marvel_KCApp.swift in Sources */,
+				4248856B2BE5886B0099FA9E /* RootViewModel.swift in Sources */,
+				424885612BE2994B0099FA9E /* NetworkHeros.swift in Sources */,
+				424885672BE2BC300099FA9E /* URLResponse+Extension.swift in Sources */,
+				4248855F2BE297020099FA9E /* Hero.swift in Sources */,
+				4248855B2BE2779E0099FA9E /* HTTPResponseCodes.swift in Sources */,
+				4248855D2BE27E3D0099FA9E /* Constants.swift in Sources */,
+				424885572BE2776D0099FA9E /* EndPoints.swift in Sources */,
+				424885652BE2A0060099FA9E /* HTTPHeader.swift in Sources */,
+				424885692BE587A20099FA9E /* AppState.swift in Sources */,
+				4248856D2BE58BA00099FA9E /* ErrorView.swift in Sources */,
 				4254902C2BE0338F00708F15 /* HomeView.swift in Sources */,
+				4248856F2BE58BB50099FA9E /* DetailView.swift in Sources */,
+				424885632BE29F020099FA9E /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +606,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -580,6 +645,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
