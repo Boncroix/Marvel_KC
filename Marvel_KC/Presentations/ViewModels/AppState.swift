@@ -12,15 +12,20 @@ enum AppStatus {
     case home, detail
 }
 
+//MARK: - AppState
 final class AppState: ObservableObject {
     @Published var status = AppStatus.home
+    private var network: NetworkHerosProtocol
     
-    init() {
+    //MARK: - Inits
+    init(network: NetworkHerosProtocol = NetworkHeros()) {
+        self.network = network
     }
     
+    //MARK: - GetHeros
     func getHeros() {
         Task {
-            
+            // TODO - Pedir Heroes
         }
     }
 }

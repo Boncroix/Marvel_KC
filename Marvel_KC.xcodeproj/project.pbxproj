@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1EE2BEDF4B400A3BC7C /* HerosRepository.swift */; };
+		421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1F02BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift */; };
+		421FC1F32BEDF6A800A3BC7C /* HerosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1F22BEDF6A800A3BC7C /* HerosUseCase.swift */; };
+		421FC1F52BEE192B00A3BC7C /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1F42BEE192B00A3BC7C /* RouterView.swift */; };
 		424771502BE1620B00E19380 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4247714F2BE1620B00E19380 /* Launch Screen.storyboard */; };
 		424885572BE2776D0099FA9E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885562BE2776D0099FA9E /* EndPoints.swift */; };
 		424885592BE277870099FA9E /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424885582BE277870099FA9E /* HTTPMethods.swift */; };
@@ -27,7 +31,7 @@
 		425490052BE0321C00708F15 /* Marvel_KCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425490042BE0321C00708F15 /* Marvel_KCTests.swift */; };
 		4254900F2BE0321C00708F15 /* Marvel_KCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254900E2BE0321C00708F15 /* Marvel_KCUITests.swift */; };
 		425490112BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425490102BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift */; };
-		4254902C2BE0338F00708F15 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254902B2BE0338F00708F15 /* HomeView.swift */; };
+		4254902C2BE0338F00708F15 /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254902B2BE0338F00708F15 /* HerosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421FC1EE2BEDF4B400A3BC7C /* HerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepository.swift; sourceTree = "<group>"; };
+		421FC1F02BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepositoryProtocol.swift; sourceTree = "<group>"; };
+		421FC1F22BEDF6A800A3BC7C /* HerosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosUseCase.swift; sourceTree = "<group>"; };
+		421FC1F42BEE192B00A3BC7C /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		4247714F2BE1620B00E19380 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		424885562BE2776D0099FA9E /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		424885582BE277870099FA9E /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
@@ -72,7 +80,7 @@
 		4254900A2BE0321C00708F15 /* Marvel_KCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marvel_KCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4254900E2BE0321C00708F15 /* Marvel_KCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_KCUITests.swift; sourceTree = "<group>"; };
 		425490102BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_KCUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4254902B2BE0338F00708F15 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4254902B2BE0338F00708F15 /* HerosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,7 @@
 		425490212BE0327E00708F15 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				421FC1EE2BEDF4B400A3BC7C /* HerosRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 		425490232BE0329900708F15 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				421FC1F02BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -243,6 +253,7 @@
 		425490252BE032AC00708F15 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				421FC1F22BEDF6A800A3BC7C /* HerosUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -284,9 +295,10 @@
 		4254902A2BE032D700708F15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4254902B2BE0338F00708F15 /* HomeView.swift */,
+				4254902B2BE0338F00708F15 /* HerosView.swift */,
 				4248856C2BE58BA00099FA9E /* ErrorView.swift */,
 				4248856E2BE58BB50099FA9E /* DetailView.swift */,
+				421FC1F42BEE192B00A3BC7C /* RouterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,18 +435,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				424885592BE277870099FA9E /* HTTPMethods.swift in Sources */,
+				421FC1F32BEDF6A800A3BC7C /* HerosUseCase.swift in Sources */,
 				42548FF32BE0321900708F15 /* Marvel_KCApp.swift in Sources */,
+				421FC1F52BEE192B00A3BC7C /* RouterView.swift in Sources */,
 				4248856B2BE5886B0099FA9E /* RootViewModel.swift in Sources */,
+				421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */,
 				424885612BE2994B0099FA9E /* NetworkHeros.swift in Sources */,
 				424885672BE2BC300099FA9E /* URLResponse+Extension.swift in Sources */,
 				4248855F2BE297020099FA9E /* Hero.swift in Sources */,
 				4248855B2BE2779E0099FA9E /* HTTPResponseCodes.swift in Sources */,
+				421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */,
 				4248855D2BE27E3D0099FA9E /* Constants.swift in Sources */,
 				424885572BE2776D0099FA9E /* EndPoints.swift in Sources */,
 				424885652BE2A0060099FA9E /* HTTPHeader.swift in Sources */,
 				424885692BE587A20099FA9E /* AppState.swift in Sources */,
 				4248856D2BE58BA00099FA9E /* ErrorView.swift in Sources */,
-				4254902C2BE0338F00708F15 /* HomeView.swift in Sources */,
+				4254902C2BE0338F00708F15 /* HerosView.swift in Sources */,
 				4248856F2BE58BB50099FA9E /* DetailView.swift in Sources */,
 				424885632BE29F020099FA9E /* NetworkError.swift in Sources */,
 			);
