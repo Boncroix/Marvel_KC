@@ -26,7 +26,7 @@ final class HerosRepositoryFake: HerosRepositoryProtocol {
     
     private var network: NetworkHerosProtocol
     
-    init(network: NetworkHerosProtocol = NetworkHerosFake()) {
+    init(network: NetworkHerosProtocol = NetworkHeros()) {
         self.network = network
     }
     

@@ -9,21 +9,35 @@ import Foundation
 
 // MARK: - Hero
 struct Hero: Codable {
+    let code: Int
+    let data: DataClass
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+    let offset, limit, total, count: Int
+    let results: [Result]
+}
+
+// MARK: - Result
+struct Result: Codable {
     let id: Int
     let name, description: String
-    let comics, series: Comics
+    let thumbnail: Thumbnail
 }
 
-// MARK: - Comics
-struct Comics: Codable {
-    let available: Int
-    let collectionURI: String
-    let items: [ComicsItem]
-    let returned: Int
+// MARK: - Thumbnail
+struct Thumbnail: Codable {
+    let path: String
+    let thumbnailExtension: Extension
+
+    enum CodingKeys: String, CodingKey {
+        case path
+        case thumbnailExtension = "extension"
+    }
 }
 
-// MARK: - ComicsItem
-struct ComicsItem: Codable {
-    let resourceURI: String
-    let name: String
+enum Extension: String, Codable {
+    case gif = "gif"
+    case jpg = "jpg"
 }

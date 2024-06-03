@@ -12,5 +12,5 @@ struct ConstApp {
     static let API_URL = "https://gateway.marvel.com"
     static let PUBLIC_KEY = "apikey=cb1f424079a03dbadf0db56d7b1f9fb7"
     static let TS = "ts=1"
-    static let HASH_MD5 = "hash=b6c0ef9d16c9a324f27c2fb8bb4583a1"
+    static let HASH_MD5 = "hash=ea6efdf7e44a8fd40bb6d3363d9e5ad2"
 }

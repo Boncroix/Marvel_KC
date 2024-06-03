@@ -11,7 +11,7 @@ import SwiftUI
 struct Marvel_KCApp: App {
     var body: some Scene {
         WindowGroup {
-            HerosView()
+            RootView(viewModel: HerosViewModel())
         }
     }
 }

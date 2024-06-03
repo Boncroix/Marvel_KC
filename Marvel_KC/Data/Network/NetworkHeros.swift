@@ -22,6 +22,8 @@ final class NetworkHeros: NetworkHerosProtocol {
             throw NetworkError.malformedURL
         }
         
+        print("\(ConstApp.API_URL)\(stringEndpoint(endpoint: .heros))\(ConstApp.TS)&\(ConstApp.PUBLIC_KEY)&\(ConstApp.HASH_MD5)")
+        
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.get
         request.setValue(HTTPMethods.content, forHTTPHeaderField: HTTPHeader.contentType)
@@ -36,11 +38,13 @@ final class NetworkHeros: NetworkHerosProtocol {
         guard let modelResponse = try? JSONDecoder().decode([Hero].self, from: data) else {
             throw NetworkError.dataDecodingFailed
         }
+
         
         return modelResponse
     }
 }
 
+/*
 //MARK: - NetworkHerosFake
 final class NetworkHerosFake: NetworkHerosProtocol {
     func getHeros() async throws -> [Hero] {
@@ -54,4 +58,4 @@ final class NetworkHerosFake: NetworkHerosProtocol {
         return fakeHeros
     }
 }
-
+*/
