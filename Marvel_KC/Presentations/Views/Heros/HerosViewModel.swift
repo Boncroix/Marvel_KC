@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import MarvelAppLibrary
 
+// MARK: - HerosViewModel
 final class HerosViewModel: ObservableObject {
     
     // MARK: Properties
     private let repository: HerosRepositoryProtocol
+    
+    @Published var herosModel: HerosEntry = herosEntryFake
     @Published var heros: [Hero] = []
-    @Published var status = AppState.home
+    @Published var status = AppState.none
     
     // MARK: Init
     init(repository: HerosRepositoryProtocol = HerosRepository()) {
@@ -21,17 +25,18 @@ final class HerosViewModel: ObservableObject {
     
     // MARK: Public Functions
     func getHeros() {
-        self.status = .loading
+        self.status = .loadingView
         
         DispatchQueue.main.async {
             Task {
                 do {
-                    let herosData = try await self.repository.getHeros()
+                    let (herosEntryData, herosData) = try await self.repository.getHeros()
+                    self.herosModel = herosEntryData
                     self.heros = herosData
-                    self.status = .loaded
+                    self.status = .herosView
                 } catch {
                     let errorMessage = errorMessage(for: error)
-                    self.status = .error(error: errorMessage)
+                    self.status = .errorView(error: errorMessage)
                     NSLog(errorMessage)
                 }
             }

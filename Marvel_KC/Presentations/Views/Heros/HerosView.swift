@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
+import MarvelAppLibrary
 
+// MARK: - HerosView
 struct HerosView: View {
+    
+    // MARK: Properties
+    @ObservedObject var herosViewModel: HerosViewModel
+    
+    // MARK: Init
+    init(herosViewModel: HerosViewModel = HerosViewModel()) {
+        self.herosViewModel = herosViewModel
+    }
+    
+    // MARK: View
     var body: some View {
-        Text("Aquí la pantalla de heroes")
+        ZStack {
+            BackgroundSubView(opatity: 0.1)
+        }
     }
 }
 

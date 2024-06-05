@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import MarvelAppLibrary
 
 struct DetailView: View {
     var body: some View {
-        Text("Aquí el Detail")
+        BackgroundSubView()
     }
 }
 

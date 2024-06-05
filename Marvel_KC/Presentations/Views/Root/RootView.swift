@@ -16,23 +16,27 @@ struct RootView: View {
     // MARK: View
     var body: some View {
         switch viewModel.status {
-        case .home:
+        case .none:
             Text("Status Home")
                 .onAppear {
                     viewModel.getHeros()
                 }
-        case .loading:
+        case .loadingView:
             LoadingView()
-        case .loaded:
+        case .herosView:
             HerosView()
-        case .error(error: let errorString):
+        case .detailView:
+            DetailView()
+        case .errorView(error: let errorString):
             ErrorView(error: errorString) {
-                viewModel.status = .home
+                viewModel.status = .none
             }
         }
     }
 }
 
+
+// MARK: - Preview
 #Preview {
     RootView(viewModel: HerosViewModel())
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MarvelAppLibrary
 
 //MARK: - HeroeRepository
 final class HerosRepository: HerosRepositoryProtocol {
@@ -16,7 +17,7 @@ final class HerosRepository: HerosRepositoryProtocol {
         self.network = network
     }
     
-    func getHeros() async throws -> [Hero] {
+    func getHeros() async throws -> (HerosEntry, [Hero]) {
         try await network.getHeros()
     }
 }
@@ -30,7 +31,7 @@ final class HerosRepositoryFake: HerosRepositoryProtocol {
         self.network = network
     }
     
-    func getHeros() async throws -> [Hero] {
+    func getHeros() async throws -> (HerosEntry, [Hero]) {
         try await network.getHeros()
     }
 }

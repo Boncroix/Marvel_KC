@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import MarvelAppLibrary
 
 struct ErrorView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
     
     // MARK: Properties
     var error: String
@@ -16,46 +19,43 @@ struct ErrorView: View {
     // MARK: View
     var body: some View {
         ZStack {
-            Image("fondo1")
-                .resizable()
-            
-            Color.white.opacity(0.4)
-            
+            BackgroundSubView()
             errorContent
         }
         .ignoresSafeArea()
     }
     
+    // MARK: SubView
     private var errorContent: some View {
         ZStack {
-            Image(.LKC)
+            Image(.marvelCrash)
                 .resizable()
-                .opacity(0.2)
-            
+                .opacity(0.6)
+                
             VStack {
                 Text("\(error)")
-                    .font(.title2)
+                    .font(.title)
                     .foregroundColor(.red)
                     .bold()
-                
+                    
                 Divider()
-                    .frame(height: 2)
+                    .frame(height: 3)
                     .overlay(.red)
-                
+                    
                 Button("Close") {
                     closure?()
                 }
-                .font(.title2)
+                .font(.title)
                 .foregroundColor(.red)
                 .frame(width: UIScreen.main.bounds.width/2-30, height: 40)
                 .bold()
             }
         }
-        .frame(width: UIScreen.main.bounds.width-50, height: 180)
-        .background(Color.gray)
+        .frame(width: UIScreen.main.bounds.width-16, height: 220)
+        .background(AppColors(colorScheme: colorScheme).blackWhite)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(.white, lineWidth: 5)
+                .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 5)
         )
         .cornerRadius(12)
         .clipped()

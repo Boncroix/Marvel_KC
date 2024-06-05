@@ -5,9 +5,9 @@
 //  Created by Jose Bueno Cruz on 2/6/24.
 //
 
-import Foundation
+import SwiftUI
 
 // MARK: - Enum AppState
 enum AppState {
-    case home, loading, loaded, error(error: String)
+    case none, herosView, detailView, loadingView, errorView(error: String)
 }
