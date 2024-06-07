@@ -16,6 +16,8 @@ protocol HerosUseCaseProtocol {
 
 //MARK: - HerosUseCase
 final class HerosUseCase: HerosUseCaseProtocol {
+    
+    // MARK: Properties
     var repository: any HerosRepositoryProtocol
     
     //MARK: - Inits
@@ -31,7 +33,9 @@ final class HerosUseCase: HerosUseCaseProtocol {
 
 //MARK: - HerosUseCaseFake
 final class HerosUseCaseFake: HerosUseCaseProtocol {
-    var repository: any HerosRepositoryProtocol
+    
+    // MARK: Properties
+    var repository: HerosRepositoryProtocol
     
     //MARK: - Inits
     init(repository: HerosRepositoryProtocol = HerosRepository(network: NetworkHeros())) {

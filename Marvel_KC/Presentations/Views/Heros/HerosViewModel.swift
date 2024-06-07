@@ -12,25 +12,26 @@ import MarvelAppLibrary
 final class HerosViewModel: ObservableObject {
     
     // MARK: Properties
-    private let repository: HerosRepositoryProtocol
+    private let useCaseHeros: HerosUseCaseProtocol
     
     @Published var herosModel: HerosEntry = herosEntryFake
     @Published var heros: [Hero] = []
     @Published var status = AppState.none
     
     // MARK: Init
-    init(repository: HerosRepositoryProtocol = HerosRepository()) {
-        self.repository = repository
+    init(useCaseHeros: HerosUseCaseProtocol = HerosUseCase()) {
+        self.useCaseHeros = useCaseHeros
     }
     
     // MARK: Public Functions
+    @MainActor
     func getHeros() {
         self.status = .loadingView
         
         DispatchQueue.main.async {
             Task {
                 do {
-                    let (herosEntryData, herosData) = try await self.repository.getHeros()
+                    let (herosEntryData, herosData) = try await self.useCaseHeros.getHeros()
                     self.herosModel = herosEntryData
                     self.heros = herosData
                     self.status = .herosView

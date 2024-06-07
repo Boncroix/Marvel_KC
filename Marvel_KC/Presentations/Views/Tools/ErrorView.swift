@@ -10,11 +10,15 @@ import MarvelAppLibrary
 
 struct ErrorView: View {
     
-    @Environment(\.colorScheme) var colorScheme
-    
     // MARK: Properties
+    @Environment(\.colorScheme) var colorScheme
     var error: String
     var closure: (() -> Void)?
+    #if os(watchOS)
+        private let height = UIScreen.main.bounds.height-16
+    #else
+        private let height = UIScreen.main.bounds.height/3
+    #endif
     
     // MARK: View
     var body: some View {
@@ -30,13 +34,9 @@ struct ErrorView: View {
         ZStack {
             Image(.marvelCrash)
                 .resizable()
-                .opacity(0.6)
                 
             VStack {
                 Text("\(error)")
-                    .font(.title)
-                    .foregroundColor(.red)
-                    .bold()
                     
                 Divider()
                     .frame(height: 3)
@@ -45,11 +45,11 @@ struct ErrorView: View {
                 Button("Close") {
                     closure?()
                 }
-                .font(.title)
-                .foregroundColor(.red)
                 .frame(width: UIScreen.main.bounds.width/2-30, height: 40)
-                .bold()
             }
+            .font(.title)
+            .foregroundColor(.red)
+            .bold()
         }
         .frame(width: UIScreen.main.bounds.width-16, height: 220)
         .background(AppColors(colorScheme: colorScheme).blackWhite)

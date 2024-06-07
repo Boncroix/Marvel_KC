@@ -12,7 +12,7 @@ struct RootView: View {
     
     // MARK: Properties
     @StateObject var viewModel: HerosViewModel
-    
+        
     // MARK: View
     var body: some View {
         switch viewModel.status {
@@ -24,7 +24,7 @@ struct RootView: View {
         case .loadingView:
             LoadingView()
         case .herosView:
-            HerosView()
+            HerosListView(herosViewModel: viewModel)
         case .detailView:
             DetailView()
         case .errorView(error: let errorString):
