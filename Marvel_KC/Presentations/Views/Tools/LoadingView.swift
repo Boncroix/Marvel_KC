@@ -15,7 +15,6 @@ struct LoadingView: View {
     @State private var rotationAngle: Double = 0
     @State private var textOpacity: Double = 1.0
     @State private var timer: Timer?
-    @Environment(\.colorScheme) var colorScheme
 
     // MARK: View
     var body: some View {
@@ -28,9 +27,11 @@ struct LoadingView: View {
     // MARK: SubViews
     private var loadingSubView: some View {
         VStack {
+            
             Image(.LKC)
                 .resizable()
-                .frame(width: 150, height: 150)
+                .frame(width: UIScreen.main.bounds.width/2,
+                       height: UIScreen.main.bounds.width/2)
                 .rotationEffect(.degrees(rotationAngle))
                 .animation(.easeInOut(duration: 0.2), value: rotationAngle)
                 .onAppear {
@@ -43,7 +44,8 @@ struct LoadingView: View {
             Text(NSLocalizedString("Loading...", comment: ""))
                 .font(AppFonts().textXL)
                 .opacity(textOpacity)
-                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
+                .animation(Animation.linear(duration: 1)
+                    .repeatForever(autoreverses: true))
                 .onAppear {
                     self.textOpacity = 0.0
                 }

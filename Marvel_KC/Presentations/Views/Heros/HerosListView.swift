@@ -31,6 +31,7 @@ struct HerosListView: View {
                 }
             }
         }
+        .navigationTitle(NSLocalizedString("HeroesList", comment: ""))
     }
 }
 

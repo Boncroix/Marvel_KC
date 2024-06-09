@@ -16,7 +16,7 @@ struct HerosRowView: View {
     private var hero: Hero
     
     #if os(watchOS)
-        private let height = UIScreen.main.bounds.height-16
+        private let height = UIScreen.main.bounds.height/2
     #else
         private let height = UIScreen.main.bounds.height/3
     #endif
@@ -30,7 +30,6 @@ struct HerosRowView: View {
     var body: some View {
         
         ZStack {
-            
             if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
                 AsyncImage(url: url) { image in
                     image
@@ -42,34 +41,35 @@ struct HerosRowView: View {
                 placeholderImage
             }
             
-            ZStack {
+            LinearGradient(
+                colors: [AppColors(colorScheme: colorScheme).whiteBlack, .clear],
+                startPoint: .bottom,
+                endPoint: .center
+                )
+            
+            VStack {
                 
-                LinearGradient(
-                    colors: [AppColors(colorScheme: colorScheme).whiteBlack, .clear],
-                    startPoint: .bottom,
-                    endPoint: .center
-                    )
-                .cornerRadius(50)
+                Spacer()
                 
-                VStack {
-                    
-                    Spacer()
-                    
-                    Text(hero.name)
-                        .font(.title2)
-                        .bold()
-                        .padding()
-                    .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
-                }
+                Text(hero.name)
+                    .font(AppFonts().textM)
+                    .bold()
+                    .padding()
+                .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
             }
         }
         .frame(width: UIScreen.main.bounds.width-16, height: height)
         .cornerRadius(50)
+        .overlay(
+            RoundedRectangle(cornerRadius: 50)
+                .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 2)
+        )
     }
     
     private var placeholderImage: some View {
         Image(systemName: "photo")
             .resizable()
+            .foregroundColor(AppColors(colorScheme: colorScheme).whiteBlack)
     }
 }
 

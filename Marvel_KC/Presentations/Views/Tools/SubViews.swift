@@ -11,13 +11,16 @@ import MarvelAppLibrary
 // MARK: - BackgroundSubView
 struct BackgroundSubView: View {
     
+    // MARK: Properties
     @Environment(\.colorScheme) var colorScheme
     let opatity: Double
     
+    // MARK: Init
     init(opatity: Double = 0) {
         self.opatity = opatity
     }
     
+    // MARK: View
     var body: some View {
         ZStack {
             Image(.backgroud)
@@ -28,6 +31,7 @@ struct BackgroundSubView: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
     BackgroundSubView()
 }

@@ -9,6 +9,8 @@ import SwiftUI
 import MarvelAppLibrary
 
 struct DetailView: View {
+    
+    
     var body: some View {
         BackgroundSubView()
     }

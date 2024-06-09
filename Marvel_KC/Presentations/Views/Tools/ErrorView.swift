@@ -8,17 +8,20 @@
 import SwiftUI
 import MarvelAppLibrary
 
+// MARK: - ErrorView
 struct ErrorView: View {
     
     // MARK: Properties
     @Environment(\.colorScheme) var colorScheme
     var error: String
     var closure: (() -> Void)?
+    
     #if os(watchOS)
-        private let height = UIScreen.main.bounds.height-16
+        private let height = UIScreen.main.bounds.height/2
     #else
         private let height = UIScreen.main.bounds.height/3
     #endif
+            
     
     // MARK: View
     var body: some View {
@@ -34,31 +37,45 @@ struct ErrorView: View {
         ZStack {
             Image(.marvelCrash)
                 .resizable()
-                
+            
+            LinearGradient(
+                colors: [AppColors(colorScheme: colorScheme).whiteBlack, .clear],
+                startPoint: .bottom,
+                endPoint: .top
+                )
+            
             VStack {
+                
+                Spacer()
+                
                 Text("\(error)")
                     
                 Divider()
                     .frame(height: 3)
                     .overlay(.red)
                     
-                Button("Close") {
+                Button(NSLocalizedString("Close", comment: "")) {
                     closure?()
                 }
-                .frame(width: UIScreen.main.bounds.width/2-30, height: 40)
+                .padding(8)
+                .background(AppColors().KCorange)
+                .cornerRadius(50)
+                .opacity(0.9)
+                
             }
-            .font(.title)
+            .padding()
+            .font(AppFonts().textL)
             .foregroundColor(.red)
             .bold()
+            
         }
-        .frame(width: UIScreen.main.bounds.width-16, height: 220)
-        .background(AppColors(colorScheme: colorScheme).blackWhite)
+        .frame(width: UIScreen.main.bounds.width-16,
+               height: height)
+        .cornerRadius(50)
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 5)
+            RoundedRectangle(cornerRadius: 50)
+                .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 2)
         )
-        .cornerRadius(12)
-        .clipped()
     }
 }
 

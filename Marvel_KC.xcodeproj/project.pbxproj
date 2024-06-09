@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4209AD5C2C160795004266F9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5B2C160795004266F9 /* DetailViewModel.swift */; };
+		4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5D2C161592004266F9 /* SeriesRepository.swift */; };
+		4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */; };
+		4209AD632C1617D1004266F9 /* MarvelAppLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4209AD622C1617D1004266F9 /* MarvelAppLibrary */; };
 		421164742C10DAAC00A87660 /* SubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421164732C10DAAC00A87660 /* SubViews.swift */; };
 		421D0BC32C10E10700A95C94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 421D0BC12C10E10700A95C94 /* Localizable.strings */; };
 		421D0BCA2C10F9D600A95C94 /* HerosRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D0BC92C10F9D600A95C94 /* HerosRowView.swift */; };
-		421D0BCE2C10FD2600A95C94 /* MarvelAppLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 421D0BCD2C10FD2600A95C94 /* MarvelAppLibrary */; };
 		421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1EE2BEDF4B400A3BC7C /* HerosRepository.swift */; };
 		421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1F02BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift */; };
 		421FC1F32BEDF6A800A3BC7C /* HerosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC1F22BEDF6A800A3BC7C /* HerosUseCase.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4209AD5B2C160795004266F9 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4209AD5D2C161592004266F9 /* SeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepository.swift; sourceTree = "<group>"; };
+		4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryProtocol.swift; sourceTree = "<group>"; };
 		421164732C10DAAC00A87660 /* SubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViews.swift; sourceTree = "<group>"; };
 		421D0BC22C10E10700A95C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		421D0BC42C10E12600A95C94 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421D0BCE2C10FD2600A95C94 /* MarvelAppLibrary in Frameworks */,
+				4209AD632C1617D1004266F9 /* MarvelAppLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				421FC1EE2BEDF4B400A3BC7C /* HerosRepository.swift */,
+				4209AD5D2C161592004266F9 /* SeriesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				421FC1F02BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift */,
+				4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				4248856E2BE58BB50099FA9E /* DetailView.swift */,
+				4209AD5B2C160795004266F9 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -310,7 +319,7 @@
 			);
 			name = Marvel_KC;
 			packageProductDependencies = (
-				421D0BCD2C10FD2600A95C94 /* MarvelAppLibrary */,
+				4209AD622C1617D1004266F9 /* MarvelAppLibrary */,
 			);
 			productName = Marvel_KC;
 			productReference = 42548FEF2BE0321900708F15 /* Marvel_KC.app */;
@@ -386,7 +395,7 @@
 			);
 			mainGroup = 42548FE62BE0321900708F15;
 			packageReferences = (
-				421D0BCC2C10FD1800A95C94 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */,
+				4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */,
 			);
 			productRefGroup = 42548FF02BE0321900708F15 /* Products */;
 			projectDirPath = "";
@@ -438,9 +447,12 @@
 				421FC1F52BEE192B00A3BC7C /* RootView.swift in Sources */,
 				421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */,
 				421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */,
+				4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */,
+				4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */,
 				42702E352C0C5A4400132539 /* AppState.swift in Sources */,
 				421164742C10DAAC00A87660 /* SubViews.swift in Sources */,
 				421D0BCA2C10F9D600A95C94 /* HerosRowView.swift in Sources */,
+				4209AD5C2C160795004266F9 /* DetailViewModel.swift in Sources */,
 				42702E2B2C0C439700132539 /* LoadingView.swift in Sources */,
 				4248856D2BE58BA00099FA9E /* ErrorView.swift in Sources */,
 				4254902C2BE0338F00708F15 /* HerosListView.swift in Sources */,
@@ -829,16 +841,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		421D0BCC2C10FD1800A95C94 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */ = {
+		4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../MarvelAppLibrary;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		421D0BCD2C10FD2600A95C94 /* MarvelAppLibrary */ = {
+		4209AD622C1617D1004266F9 /* MarvelAppLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 421D0BCC2C10FD1800A95C94 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */;
+			package = 4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */;
 			productName = MarvelAppLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
