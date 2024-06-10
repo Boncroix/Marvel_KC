@@ -10,7 +10,7 @@ import Foundation
 import Foundation
 import MarvelAppLibrary
 
-//MARK: - SeriesRepository
+// MARK: - SeriesRepository
 final class SeriesRepository: SeriesRepositoryProtocol {
     
     // MARK: Properties
@@ -27,3 +27,19 @@ final class SeriesRepository: SeriesRepositoryProtocol {
     }
 }
 
+// MARK: - SeriesRepositoryFake
+final class SeriesRepositoryFake: SeriesRepositoryProtocol {
+    
+    // MARK: Properties
+    private var network: NetworkSeriesProtocol
+    
+    // MARK: Init
+    init(network: NetworkSeriesProtocol = NetworkSeriesFake()) {
+        self.network = network
+    }
+    
+    // MARK: Functions
+    func getSeries(hero: Hero) async throws -> (SeriesEntry, [Serie]) {
+        try await network.getSeries(hero: hero)
+    }
+}

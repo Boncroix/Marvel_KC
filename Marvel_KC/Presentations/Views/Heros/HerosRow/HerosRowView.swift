@@ -35,10 +35,10 @@ struct HerosRowView: View {
                     image
                         .resizable()
                 } placeholder: {
-                    placeholderImage
+                    PlaceHolderImage()
                 }
             } else {
-                placeholderImage
+                PlaceHolderImage()
             }
             
             LinearGradient(
@@ -64,12 +64,6 @@ struct HerosRowView: View {
             RoundedRectangle(cornerRadius: 50)
                 .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 2)
         )
-    }
-    
-    private var placeholderImage: some View {
-        Image(systemName: "photo")
-            .resizable()
-            .foregroundColor(AppColors(colorScheme: colorScheme).whiteBlack)
     }
 }
 

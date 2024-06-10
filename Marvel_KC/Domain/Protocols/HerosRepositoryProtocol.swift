@@ -8,7 +8,7 @@
 import Foundation
 import MarvelAppLibrary
 
-//MARK: - HerosRepositoryProtocol
+// MARK: - HerosRepositoryProtocol
 protocol HerosRepositoryProtocol {
     func getHeros() async throws -> (HerosEntry, [Hero])
 }

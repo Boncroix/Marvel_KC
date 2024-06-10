@@ -8,7 +8,7 @@
 import Foundation
 import MarvelAppLibrary
 
-//MARK: - HeroeRepository
+// MARK: - HeroeRepository
 final class HerosRepository: HerosRepositoryProtocol {
     
     // MARK: Properties
@@ -25,14 +25,14 @@ final class HerosRepository: HerosRepositoryProtocol {
     }
 }
 
-//MARK: - HerosRepositoryFake
+// MARK: - HerosRepositoryFake
 final class HerosRepositoryFake: HerosRepositoryProtocol {
     
     // MARK: Properties
     private var network: NetworkHerosProtocol
     
     // MARK: Init
-    init(network: NetworkHerosProtocol = NetworkHeros()) {
+    init(network: NetworkHerosProtocol = NetworkHerosFake()) {
         self.network = network
     }
     

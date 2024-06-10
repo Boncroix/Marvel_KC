@@ -16,7 +16,7 @@ final class HerosViewModel: ObservableObject {
     
     @Published var herosModel: HerosEntry = herosEntryFake
     @Published var heros: [Hero] = []
-    @Published var status = AppState.none
+    @Published var status = Status.none
     
     // MARK: Init
     init(useCaseHeros: HerosUseCaseProtocol = HerosUseCase()) {

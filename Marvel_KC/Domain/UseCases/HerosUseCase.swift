@@ -8,41 +8,41 @@
 import Foundation
 import MarvelAppLibrary
 
-//MARK: - Protocol
+// MARK: - Protocol
 protocol HerosUseCaseProtocol {
     var repository: HerosRepositoryProtocol {get set}
     func getHeros() async throws -> (HerosEntry, [Hero])
 }
 
-//MARK: - HerosUseCase
+// MARK: - HerosUseCase
 final class HerosUseCase: HerosUseCaseProtocol {
     
     // MARK: Properties
     var repository: any HerosRepositoryProtocol
     
-    //MARK: - Inits
+    // MARK: - Inits
     init(repository: HerosRepositoryProtocol = HerosRepository(network: NetworkHeros())) {
         self.repository = repository
     }
     
-    //MARK: - GetHeros
+    // MARK: - GetHeros
     func getHeros() async throws -> (HerosEntry, [Hero]) {
         return try await repository.getHeros()
     }
 }
 
-//MARK: - HerosUseCaseFake
+// MARK: - HerosUseCaseFake
 final class HerosUseCaseFake: HerosUseCaseProtocol {
     
     // MARK: Properties
     var repository: HerosRepositoryProtocol
     
-    //MARK: - Inits
+    // MARK: - Inits
     init(repository: HerosRepositoryProtocol = HerosRepository(network: NetworkHeros())) {
         self.repository = repository
     }
     
-    //MARK: - GetHeros
+    // MARK: - GetHeros
     func getHeros() async throws -> (HerosEntry, [Hero]) {
         return try await repository.getHeros()
     }

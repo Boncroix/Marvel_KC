@@ -24,9 +24,9 @@ struct RootView: View {
         case .loadingView:
             LoadingView()
         case .herosView:
-            HerosListView(herosViewModel: viewModel)
+            HerosListView(viewModel: viewModel)
         case .detailView:
-            DetailView()
+            LoadingView()
         case .errorView(error: let errorString):
             ErrorView(error: errorString) {
                 viewModel.status = .none

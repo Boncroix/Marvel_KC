@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+// MARK: - Marvel_KCApp
 @main
 struct Marvel_KCApp: App {
+    
+    // MARK: View
     var body: some Scene {
         WindowGroup {
             RootView(viewModel: HerosViewModel())

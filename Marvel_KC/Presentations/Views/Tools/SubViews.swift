@@ -31,7 +31,36 @@ struct BackgroundSubView: View {
     }
 }
 
+// MARK: - NavigationButton
+struct NavigationButton: View {
+    let title: String
+    let action: (String) -> Void
+    
+    var body: some View {
+        Button(action: {
+            action("hola")
+        }) {
+            Text(title)
+        }
+    }
+}
+
+// MARK: PlaceHolderImage
+struct PlaceHolderImage: View {
+    
+    // MARK: Propreties
+    @Environment(\.colorScheme) var colorScheme
+    
+    // MARK: View
+    var body: some View {
+        Image(systemName: "photo")
+            .resizable()
+            .foregroundColor(AppColors(colorScheme: colorScheme).whiteBlack)
+    }
+}
+
 // MARK: - Preview
 #Preview {
     BackgroundSubView()
 }
+

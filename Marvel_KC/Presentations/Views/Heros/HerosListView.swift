@@ -12,26 +12,41 @@ import MarvelAppLibrary
 struct HerosListView: View {
     
     // MARK: Properties
-    @StateObject var herosViewModel: HerosViewModel
-    
-    
+    @StateObject var viewModel: HerosViewModel
+
     // MARK: View
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
-                BackgroundSubView(opatity: 0.1)
+                BackgroundSubView(opatity: 0.6)
                     
                 ScrollView {
-                    ForEach(herosViewModel.heros) { hero in
+                    ForEach(viewModel.heros) { hero in
                         NavigationLink(
-                            destination: DetailView(),
+                            destination: DetailView(
+                                hero: hero,
+                                viewModel: DetailViewModel()),
                             label: { HerosRowView(hero: hero)
                             })
                     }
                 }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Text("Prev")
+                        })
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Text("Next")
+                        })
+                    }
+                }
             }
+            .navigationTitle(NSLocalizedString("HeroesList", comment: ""))
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(NSLocalizedString("HeroesList", comment: ""))
     }
 }
 
@@ -42,5 +57,5 @@ struct HerosListView: View {
         viewModelFake.getHeros()
     }
     
-    return HerosListView(herosViewModel: viewModelFake)
+    return HerosListView(viewModel: viewModelFake)
 }

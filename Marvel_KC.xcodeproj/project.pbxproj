@@ -11,6 +11,7 @@
 		4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5D2C161592004266F9 /* SeriesRepository.swift */; };
 		4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */; };
 		4209AD632C1617D1004266F9 /* MarvelAppLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4209AD622C1617D1004266F9 /* MarvelAppLibrary */; };
+		4209AD652C16BA56004266F9 /* SeriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD642C16BA56004266F9 /* SeriesUseCase.swift */; };
 		421164742C10DAAC00A87660 /* SubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421164732C10DAAC00A87660 /* SubViews.swift */; };
 		421D0BC32C10E10700A95C94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 421D0BC12C10E10700A95C94 /* Localizable.strings */; };
 		421D0BCA2C10F9D600A95C94 /* HerosRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D0BC92C10F9D600A95C94 /* HerosRowView.swift */; };
@@ -29,8 +30,9 @@
 		425490112BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425490102BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift */; };
 		4254902C2BE0338F00708F15 /* HerosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254902B2BE0338F00708F15 /* HerosListView.swift */; };
 		42702E2B2C0C439700132539 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E2A2C0C439700132539 /* LoadingView.swift */; };
-		42702E352C0C5A4400132539 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E342C0C5A4400132539 /* AppState.swift */; };
+		42702E352C0C5A4400132539 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E342C0C5A4400132539 /* Status.swift */; };
 		42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E362C0C5B7300132539 /* HerosViewModel.swift */; };
+		42B9A5B62C177F9A003921C5 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9A5B52C177F9A003921C5 /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		4209AD5B2C160795004266F9 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4209AD5D2C161592004266F9 /* SeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepository.swift; sourceTree = "<group>"; };
 		4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		4209AD642C16BA56004266F9 /* SeriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesUseCase.swift; sourceTree = "<group>"; };
 		421164732C10DAAC00A87660 /* SubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViews.swift; sourceTree = "<group>"; };
 		421D0BC22C10E10700A95C94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		421D0BC42C10E12600A95C94 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -78,8 +81,9 @@
 		425490102BE0321C00708F15 /* Marvel_KCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_KCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4254902B2BE0338F00708F15 /* HerosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosListView.swift; sourceTree = "<group>"; };
 		42702E2A2C0C439700132539 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		42702E342C0C5A4400132539 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		42702E342C0C5A4400132539 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		42702E362C0C5B7300132539 /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
+		42B9A5B52C177F9A003921C5 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				421FC1F22BEDF6A800A3BC7C /* HerosUseCase.swift */,
+				4209AD642C16BA56004266F9 /* SeriesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -234,7 +239,7 @@
 		425490272BE032BF00708F15 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				42702E342C0C5A4400132539 /* AppState.swift */,
+				42702E342C0C5A4400132539 /* Status.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				421FC1F42BEE192B00A3BC7C /* RootView.swift */,
+				42B9A5B52C177F9A003921C5 /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -444,12 +450,13 @@
 				42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */,
 				421FC1F32BEDF6A800A3BC7C /* HerosUseCase.swift in Sources */,
 				42548FF32BE0321900708F15 /* Marvel_KCApp.swift in Sources */,
+				42B9A5B62C177F9A003921C5 /* RootViewModel.swift in Sources */,
 				421FC1F52BEE192B00A3BC7C /* RootView.swift in Sources */,
 				421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */,
 				421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */,
 				4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */,
 				4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */,
-				42702E352C0C5A4400132539 /* AppState.swift in Sources */,
+				42702E352C0C5A4400132539 /* Status.swift in Sources */,
 				421164742C10DAAC00A87660 /* SubViews.swift in Sources */,
 				421D0BCA2C10F9D600A95C94 /* HerosRowView.swift in Sources */,
 				4209AD5C2C160795004266F9 /* DetailViewModel.swift in Sources */,
@@ -457,6 +464,7 @@
 				4248856D2BE58BA00099FA9E /* ErrorView.swift in Sources */,
 				4254902C2BE0338F00708F15 /* HerosListView.swift in Sources */,
 				4248856F2BE58BB50099FA9E /* DetailView.swift in Sources */,
+				4209AD652C16BA56004266F9 /* SeriesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
