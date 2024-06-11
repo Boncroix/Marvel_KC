@@ -17,16 +17,14 @@ struct RootView: View {
     var body: some View {
         switch viewModel.status {
         case .none:
-            Text("Status Home")
+            Text("Status none")
                 .onAppear {
                     viewModel.getHeros()
                 }
         case .loadingView:
             LoadingView()
-        case .herosView:
+        case .home:
             HerosListView(viewModel: viewModel)
-        case .detailView:
-            LoadingView()
         case .errorView(error: let errorString):
             ErrorView(error: errorString) {
                 viewModel.status = .none

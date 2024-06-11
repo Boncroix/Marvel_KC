@@ -26,7 +26,7 @@ struct ErrorView: View {
     // MARK: View
     var body: some View {
         ZStack {
-            BackgroundSubView()
+            BackgroundSubView(opatity: 0.6)
             errorContent
         }
         .ignoresSafeArea()

@@ -32,7 +32,6 @@
 		42702E2B2C0C439700132539 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E2A2C0C439700132539 /* LoadingView.swift */; };
 		42702E352C0C5A4400132539 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E342C0C5A4400132539 /* Status.swift */; };
 		42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E362C0C5B7300132539 /* HerosViewModel.swift */; };
-		42B9A5B62C177F9A003921C5 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9A5B52C177F9A003921C5 /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 		42702E2A2C0C439700132539 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		42702E342C0C5A4400132539 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		42702E362C0C5B7300132539 /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
-		42B9A5B52C177F9A003921C5 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				421FC1F42BEE192B00A3BC7C /* RootView.swift */,
-				42B9A5B52C177F9A003921C5 /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -450,7 +447,6 @@
 				42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */,
 				421FC1F32BEDF6A800A3BC7C /* HerosUseCase.swift in Sources */,
 				42548FF32BE0321900708F15 /* Marvel_KCApp.swift in Sources */,
-				42B9A5B62C177F9A003921C5 /* RootViewModel.swift in Sources */,
 				421FC1F52BEE192B00A3BC7C /* RootView.swift in Sources */,
 				421FC1F12BEDF5A600A3BC7C /* HerosRepositoryProtocol.swift in Sources */,
 				421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */,

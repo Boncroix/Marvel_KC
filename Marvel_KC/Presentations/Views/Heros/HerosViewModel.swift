@@ -34,7 +34,7 @@ final class HerosViewModel: ObservableObject {
                     let (herosEntryData, herosData) = try await self.useCaseHeros.getHeros()
                     self.herosModel = herosEntryData
                     self.heros = herosData
-                    self.status = .herosView
+                    self.status = .home
                 } catch {
                     let errorMessage = errorMessage(for: error)
                     self.status = .errorView(error: errorMessage)

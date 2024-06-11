@@ -27,27 +27,27 @@ struct LoadingView: View {
     // MARK: SubViews
     private var loadingSubView: some View {
         VStack {
-            
-            Image(.LKC)
+            Image("LKC")
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width/2,
-                       height: UIScreen.main.bounds.width/2)
+                .frame(width: UIScreen.main.bounds.width / 3,
+                       height: UIScreen.main.bounds.width / 3)
                 .rotationEffect(.degrees(rotationAngle))
-                .animation(.easeInOut(duration: 0.2), value: rotationAngle)
                 .onAppear {
                     startTimer()
                 }
                 .onDisappear {
                     stopTimer()
                 }
+                .animation(.easeInOut(duration: 0.2), value: rotationAngle)
 
             Text(NSLocalizedString("Loading...", comment: ""))
-                .font(AppFonts().textXL)
+                .font(AppFonts().textL)
                 .opacity(textOpacity)
-                .animation(Animation.linear(duration: 1)
-                    .repeatForever(autoreverses: true))
                 .onAppear {
-                    self.textOpacity = 0.0
+                    withAnimation(Animation.linear(duration: 1)
+                        .repeatForever(autoreverses: true)) {
+                        self.textOpacity = 0.0
+                    }
                 }
         }
     }

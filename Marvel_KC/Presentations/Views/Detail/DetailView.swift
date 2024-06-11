@@ -16,22 +16,39 @@ struct DetailView: View {
     @StateObject var viewModel: DetailViewModel
     
     var body: some View {
-        ZStack {
-            BackgroundSubView(opatity: 0.6)
-            
-            VStack {
-                if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
-                    AsyncImage(url: url) { image in
-                        image
-                            .resizable()
-                    } placeholder: {
-                        PlaceHolderImage()
+        Group {
+            switch viewModel.status {
+            case .none:
+                Text("Status none")
+                    .onAppear {
+                        viewModel.getSeries(hero: self.hero)
                     }
-                } else {
-                    PlaceHolderImage()
+            case .loadingView:
+                LoadingView()
+        
+            case .errorView(error: let errorString):
+                ErrorView(error: errorString) {
+                    viewModel.status = .none
                 }
-                ScrollView {
+            case .home:
+                ZStack {
+                    BackgroundSubView(opatity: 0.6)
                     
+                    VStack {
+                        if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
+                            AsyncImage(url: url) { image in
+                                image
+                                    .resizable()
+                            } placeholder: {
+                                PlaceHolderImage()
+                            }
+                        } else {
+                            PlaceHolderImage()
+                        }
+                        ScrollView {
+                            
+                        }
+                    }
                 }
             }
         }

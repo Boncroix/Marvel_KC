@@ -11,8 +11,7 @@ import MarvelAppLibrary
 // MARK: - Enum AppState
 enum Status {
     case none,
-         herosView,
-         detailView,
+         home,
          loadingView,
          errorView(error: String)
 }

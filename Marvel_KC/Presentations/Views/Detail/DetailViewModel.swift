@@ -33,6 +33,7 @@ final class DetailViewModel: ObservableObject {
                 let (seriesEntryData, seriesData) = try await self.useCase.getSeries(hero: hero)
                 self.seriesModel = seriesEntryData
                 self.series = seriesData
+                self.status = .home
             } catch {
                 let errorMessage = errorMessage(for: error)
                 self.status = .errorView(error: errorMessage)
