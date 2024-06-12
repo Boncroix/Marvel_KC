@@ -72,10 +72,7 @@ struct ErrorView: View {
         .frame(width: UIScreen.main.bounds.width-16,
                height: height)
         .cornerRadius(50)
-        .overlay(
-            RoundedRectangle(cornerRadius: 50)
-                .stroke(AppColors(colorScheme: colorScheme).whiteBlack, lineWidth: 2)
-        )
+        .shadow(radius: 10)
     }
 }
 

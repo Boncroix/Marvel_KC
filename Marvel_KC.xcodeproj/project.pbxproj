@@ -32,6 +32,8 @@
 		42702E2B2C0C439700132539 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E2A2C0C439700132539 /* LoadingView.swift */; };
 		42702E352C0C5A4400132539 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E342C0C5A4400132539 /* Status.swift */; };
 		42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E362C0C5B7300132539 /* HerosViewModel.swift */; };
+		42A03FD52C195EB7000DA656 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A03FD42C195EB7000DA656 /* SeriesRowView.swift */; };
+		42A03FD72C19632F000DA656 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A03FD62C19632F000DA656 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		42702E2A2C0C439700132539 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		42702E342C0C5A4400132539 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		42702E362C0C5B7300132539 /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
+		42A03FD42C195EB7000DA656 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
+		42A03FD62C19632F000DA656 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 		42702E302C0C53AE00132539 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				42A03FD32C195E9D000DA656 /* SeriesRow */,
 				4248856E2BE58BB50099FA9E /* DetailView.swift */,
 				4209AD5B2C160795004266F9 /* DetailViewModel.swift */,
 			);
@@ -303,6 +308,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42A03FD32C195E9D000DA656 /* SeriesRow */ = {
+			isa = PBXGroup;
+			children = (
+				42A03FD42C195EB7000DA656 /* SeriesRowView.swift */,
+				42A03FD62C19632F000DA656 /* SwiftUIView.swift */,
+			);
+			path = SeriesRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +466,8 @@
 				421FC1EF2BEDF4B400A3BC7C /* HerosRepository.swift in Sources */,
 				4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */,
 				4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */,
+				42A03FD52C195EB7000DA656 /* SeriesRowView.swift in Sources */,
+				42A03FD72C19632F000DA656 /* SwiftUIView.swift in Sources */,
 				42702E352C0C5A4400132539 /* Status.swift in Sources */,
 				421164742C10DAAC00A87660 /* SubViews.swift in Sources */,
 				421D0BCA2C10F9D600A95C94 /* HerosRowView.swift in Sources */,

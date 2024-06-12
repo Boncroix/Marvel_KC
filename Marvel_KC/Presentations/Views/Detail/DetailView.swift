@@ -15,6 +15,12 @@ struct DetailView: View {
     var hero: Hero
     @StateObject var viewModel: DetailViewModel
     
+    #if os(watchOS)
+        private let height = UIScreen.main.bounds.height/2
+    #else
+        private let height = UIScreen.main.bounds.height/3
+    #endif
+    
     var body: some View {
         Group {
             switch viewModel.status {
@@ -34,22 +40,41 @@ struct DetailView: View {
                 ZStack {
                     BackgroundSubView(opatity: 0.6)
                     
-                    VStack {
-                        if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
-                            AsyncImage(url: url) { image in
-                                image
-                                    .resizable()
-                            } placeholder: {
+                    VStack(spacing: 8) {
+                        Text(hero.name)
+                            .font(AppFonts().textM)
+                            .bold()
+                        VStack {
+                            if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
+                                AsyncImage(url: url) { image in
+                                    image
+                                        .resizable()
+                                        .cornerRadius(20)
+                                } placeholder: {
+                                    PlaceHolderImage()
+                                }
+                            } else {
                                 PlaceHolderImage()
                             }
-                        } else {
-                            PlaceHolderImage()
                         }
+                        .frame(height: height)
+                        
                         ScrollView {
-                            
+                            Text(hero.description)
+                        }
+                        if !viewModel.series.isEmpty {
+                            ScrollView(.horizontal) {
+                                HStack {
+                                    ForEach(viewModel.series) { serie in
+                                        SeriesRowView(serie: serie)
+                                    }
+                                }
+                            }
                         }
                     }
+                    .frame(width: UIScreen.main.bounds.width-16)
                 }
+                
             }
         }
     }

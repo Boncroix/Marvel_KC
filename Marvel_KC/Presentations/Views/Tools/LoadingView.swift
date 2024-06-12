@@ -26,11 +26,11 @@ struct LoadingView: View {
     
     // MARK: SubViews
     private var loadingSubView: some View {
-        VStack {
+        VStack(spacing: 0) {
             Image("LKC")
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width / 3,
-                       height: UIScreen.main.bounds.width / 3)
+                .frame(width: UIScreen.main.bounds.width / 2.5,
+                       height: UIScreen.main.bounds.width / 2.5)
                 .rotationEffect(.degrees(rotationAngle))
                 .onAppear {
                     startTimer()

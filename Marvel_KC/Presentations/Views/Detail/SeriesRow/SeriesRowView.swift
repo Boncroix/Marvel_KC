@@ -1,35 +1,37 @@
 //
-//  HerosRowView.swift
+//  SeriesRowView.swift
 //  Marvel_KC
 //
-//  Created by Jose Bueno Cruz on 5/6/24.
+//  Created by Jose Bueno Cruz on 12/6/24.
 //
 
 import SwiftUI
 import MarvelAppLibrary
 
-// MARK: - HerosRowView
-struct HerosRowView: View {
+// MARK: - SeriesRowView
+struct SeriesRowView: View {
     
     // MARK: Properties
     @Environment(\.colorScheme) var colorScheme
-    private var hero: Hero
+    private var serie: Serie
     
     #if os(watchOS)
-        private let height = UIScreen.main.bounds.height/2
-    #else
         private let height = UIScreen.main.bounds.height/3
+        private let width = UIScreen.main.bounds.width/2
+    #else
+        private let height = UIScreen.main.bounds.height/4
+        private let width = UIScreen.main.bounds.width/3
     #endif
     
     // MARK: Init
-    init(hero: Hero) {
-        self.hero = hero
+    init(serie: Serie) {
+        self.serie = serie
     }
     
     // MARK: View
     var body: some View {
         ZStack {
-            if let urlString = hero.thumbnail.getUrlImage(), let url = URL(string: urlString) {
+            if let urlString = serie.thumbnail.getUrlImage(), let url = URL(string: urlString) {
                 AsyncImage(url: url) { image in
                     image
                         .resizable()
@@ -50,20 +52,20 @@ struct HerosRowView: View {
                 
                 Spacer()
                 
-                Text(hero.name)
-                    .font(AppFonts().textM)
+                Text(serie.title)
+                    .font(AppFonts().textXS)
                     .bold()
                     .padding()
                 .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
             }
         }
-        .frame(width: UIScreen.main.bounds.width-16, height: height)
-        .cornerRadius(50)
+        .frame(width: width, height: height)
+        .cornerRadius(20)
         .shadow(radius: 10)
     }
 }
 
 // MARK: - Preview
 #Preview {
-    HerosRowView(hero: character2)
+    SeriesRowView(serie: serie1)
 }
