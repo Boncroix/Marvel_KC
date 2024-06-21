@@ -1,5 +1,5 @@
 {
-  "originHash" : "d5db0c0408fe8def200b705ab79d578f9d3e70bb2405ac04683d982110b175df",
+  "originHash" : "f18a3e7f75e662cc8981a5eda81b3a9ef5f4b06a95a9d76c0b59ac4272a72d32",
   "pins" : [
     {
       "identity" : "keychain-swift",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "d108a1fa6189e661f91560548ef48651ed8d93b9",
         "version" : "20.0.0"
+      }
+    },
+    {
+      "identity" : "marvelapplibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Boncroix/MarvelAppLibrary.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ddd761700c69e666bbea9abff369dd3b04d8366e"
       }
     }
   ],

@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4209AD5C2C160795004266F9 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5B2C160795004266F9 /* DetailViewModel.swift */; };
 		4209AD5E2C161592004266F9 /* SeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5D2C161592004266F9 /* SeriesRepository.swift */; };
 		4209AD602C16165C004266F9 /* SeriesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD5F2C16165C004266F9 /* SeriesRepositoryProtocol.swift */; };
-		4209AD632C1617D1004266F9 /* MarvelAppLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4209AD622C1617D1004266F9 /* MarvelAppLibrary */; };
 		4209AD652C16BA56004266F9 /* SeriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209AD642C16BA56004266F9 /* SeriesUseCase.swift */; };
 		421164742C10DAAC00A87660 /* SubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421164732C10DAAC00A87660 /* SubViews.swift */; };
 		421D0BC32C10E10700A95C94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 421D0BC12C10E10700A95C94 /* Localizable.strings */; };
@@ -34,6 +33,7 @@
 		42702E372C0C5B7300132539 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42702E362C0C5B7300132539 /* HerosViewModel.swift */; };
 		42A03FD52C195EB7000DA656 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A03FD42C195EB7000DA656 /* SeriesRowView.swift */; };
 		42A03FD72C19632F000DA656 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A03FD62C19632F000DA656 /* SwiftUIView.swift */; };
+		42A7A3F92C25E791005B2BCE /* MarvelAppLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 42A7A3F82C25E791005B2BCE /* MarvelAppLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4209AD632C1617D1004266F9 /* MarvelAppLibrary in Frameworks */,
+				42A7A3F92C25E791005B2BCE /* MarvelAppLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +336,7 @@
 			);
 			name = Marvel_KC;
 			packageProductDependencies = (
-				4209AD622C1617D1004266F9 /* MarvelAppLibrary */,
+				42A7A3F82C25E791005B2BCE /* MarvelAppLibrary */,
 			);
 			productName = Marvel_KC;
 			productReference = 42548FEF2BE0321900708F15 /* Marvel_KC.app */;
@@ -412,7 +412,7 @@
 			);
 			mainGroup = 42548FE62BE0321900708F15;
 			packageReferences = (
-				4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */,
+				42A7A3F72C25E781005B2BCE /* XCRemoteSwiftPackageReference "MarvelAppLibrary" */,
 			);
 			productRefGroup = 42548FF02BE0321900708F15 /* Products */;
 			projectDirPath = "";
@@ -860,17 +860,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../MarvelAppLibrary;
+/* Begin XCRemoteSwiftPackageReference section */
+		42A7A3F72C25E781005B2BCE /* XCRemoteSwiftPackageReference "MarvelAppLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boncroix/MarvelAppLibrary.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4209AD622C1617D1004266F9 /* MarvelAppLibrary */ = {
+		42A7A3F82C25E791005B2BCE /* MarvelAppLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4209AD612C1617BF004266F9 /* XCLocalSwiftPackageReference "../MarvelAppLibrary" */;
+			package = 42A7A3F72C25E781005B2BCE /* XCRemoteSwiftPackageReference "MarvelAppLibrary" */;
 			productName = MarvelAppLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */

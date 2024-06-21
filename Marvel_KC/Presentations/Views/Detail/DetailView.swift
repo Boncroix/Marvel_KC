@@ -74,7 +74,6 @@ struct DetailView: View {
                     }
                     .frame(width: UIScreen.main.bounds.width-16)
                 }
-                
             }
         }
     }

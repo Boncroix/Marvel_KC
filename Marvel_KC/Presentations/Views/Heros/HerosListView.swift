@@ -30,19 +30,6 @@ struct HerosListView: View {
                             })
                     }
                 }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("Prev")
-                        })
-                    }
-                    
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("Next")
-                        })
-                    }
-                }
             }
             .navigationTitle(NSLocalizedString("HeroesList", comment: ""))
             .navigationBarTitleDisplayMode(.inline)
