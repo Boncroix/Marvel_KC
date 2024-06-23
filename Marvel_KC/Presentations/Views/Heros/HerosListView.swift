@@ -12,22 +12,32 @@ import MarvelAppLibrary
 struct HerosListView: View {
     
     // MARK: Properties
-    @StateObject var viewModel: HerosViewModel
+    @EnvironmentObject var viewModel: HerosViewModel
+    
+    #if os(watchOS)
+        private let height = WKInterfaceDevice.current().screenBounds.height / 2
+        private let width = WKInterfaceDevice.current().screenBounds.width - 16
+    #else
+        private let height = UIScreen.main.bounds.height / 3
+        private let width = UIScreen.main.bounds.width - 16
+    #endif
 
     // MARK: View
     var body: some View {
         NavigationStack {
             ZStack {
                 BackgroundSubView(opatity: 0.6)
+                    .id(0)
                     
                 ScrollView {
                     ForEach(viewModel.heros) { hero in
                         NavigationLink(
                             destination: DetailView(
-                                hero: hero,
-                                viewModel: DetailViewModel()),
+                                hero: hero, viewModel: DetailViewModel()),
                             label: { HerosRowView(hero: hero)
                             })
+                        .id(1)
+                        .frame(width: width, height: height)
                     }
                 }
             }
@@ -44,5 +54,5 @@ struct HerosListView: View {
         viewModelFake.getHeros()
     }
     
-    return HerosListView(viewModel: viewModelFake)
+    return HerosListView().environmentObject(viewModelFake)
 }

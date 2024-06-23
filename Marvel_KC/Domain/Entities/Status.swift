@@ -9,7 +9,7 @@ import SwiftUI
 import MarvelAppLibrary
 
 // MARK: - Enum AppState
-enum Status {
+enum Status: Equatable {
     case none,
          home,
          loadingView,

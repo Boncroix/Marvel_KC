@@ -1,5 +1,5 @@
 {
-  "originHash" : "f18a3e7f75e662cc8981a5eda81b3a9ef5f4b06a95a9d76c0b59ac4272a72d32",
+  "originHash" : "558a75f0c30d494b1b8cc56690172e24cbbdb5e6e1f56104aecbe334c5f77606",
   "pins" : [
     {
       "identity" : "keychain-swift",
@@ -17,6 +17,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "ddd761700c69e666bbea9abff369dd3b04d8366e"
+      }
+    },
+    {
+      "identity" : "viewinspector",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:nalexn/ViewInspector.git",
+      "state" : {
+        "revision" : "7b1732802ffe30e6a67754bda6c7819e5cb0eb70",
+        "version" : "0.9.11"
       }
     }
   ],

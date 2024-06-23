@@ -16,9 +16,11 @@ struct HerosRowView: View {
     private var hero: Hero
     
     #if os(watchOS)
-        private let height = UIScreen.main.bounds.height/2
+        private let height = WKInterfaceDevice.current().screenBounds.height / 2
+        private let width = WKInterfaceDevice.current().screenBounds.width - 16
     #else
-        private let height = UIScreen.main.bounds.height/3
+        private let height = UIScreen.main.bounds.height / 3
+        private let width = UIScreen.main.bounds.width - 16
     #endif
     
     // MARK: Init
@@ -33,6 +35,7 @@ struct HerosRowView: View {
                 AsyncImage(url: url) { image in
                     image
                         .resizable()
+                        .id(0)
                 } placeholder: {
                     PlaceHolderImage()
                 }
@@ -45,6 +48,7 @@ struct HerosRowView: View {
                 startPoint: .bottom,
                 endPoint: .center
                 )
+            .id(1)
             
             VStack {
                 
@@ -54,11 +58,12 @@ struct HerosRowView: View {
                     .font(AppFonts().textM)
                     .bold()
                     .padding()
+                    .id(2)
                 .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
             }
         }
-        .frame(width: UIScreen.main.bounds.width-16, height: height)
-        .cornerRadius(50)
+        .frame(width: width, height: height)
+        .cornerRadius(25)
         .shadow(radius: 10)
     }
 }

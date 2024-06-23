@@ -16,8 +16,8 @@ struct SeriesRowView: View {
     private var serie: Serie
     
     #if os(watchOS)
-        private let height = UIScreen.main.bounds.height/3
-        private let width = UIScreen.main.bounds.width/2
+        private let height = WKInterfaceDevice.current().screenBounds.height / 4
+        private let width = WKInterfaceDevice.current().screenBounds.width / 3
     #else
         private let height = UIScreen.main.bounds.height/4
         private let width = UIScreen.main.bounds.width/3
@@ -35,6 +35,7 @@ struct SeriesRowView: View {
                 AsyncImage(url: url) { image in
                     image
                         .resizable()
+                        .id(0)
                 } placeholder: {
                     PlaceHolderImage()
                 }
@@ -47,6 +48,7 @@ struct SeriesRowView: View {
                 startPoint: .bottom,
                 endPoint: .center
                 )
+            .id(1)
             
             VStack {
                 
@@ -57,10 +59,11 @@ struct SeriesRowView: View {
                     .bold()
                     .padding()
                 .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
+                .id(3)
             }
         }
         .frame(width: width, height: height)
-        .cornerRadius(20)
+        .cornerRadius(25)
         .shadow(radius: 10)
     }
 }

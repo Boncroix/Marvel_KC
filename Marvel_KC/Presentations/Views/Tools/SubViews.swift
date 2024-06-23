@@ -22,26 +22,15 @@ struct BackgroundSubView: View {
     
     // MARK: View
     var body: some View {
+        
         ZStack {
-            Image(.backgroud)
+            Image("backgroud")
                 .resizable()
+                .id(0)
             Color(AppColors(colorScheme: colorScheme).whiteBlack.opacity(opatity))
+                .id(1)
         }
         .ignoresSafeArea()
-    }
-}
-
-// MARK: - NavigationButton
-struct NavigationButton: View {
-    let title: String
-    let action: (String) -> Void
-    
-    var body: some View {
-        Button(action: {
-            action("hola")
-        }) {
-            Text(title)
-        }
     }
 }
 
@@ -56,6 +45,7 @@ struct PlaceHolderImage: View {
         Image(systemName: "photo")
             .resizable()
             .foregroundColor(AppColors(colorScheme: colorScheme).whiteBlack)
+            .id(0)
     }
 }
 

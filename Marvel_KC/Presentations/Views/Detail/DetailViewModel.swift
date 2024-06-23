@@ -24,20 +24,20 @@ final class DetailViewModel: ObservableObject {
     }
     
     // MARK: Public Functions
-    @MainActor
     func getSeries(hero: Hero) {
         self.status = .loadingView
-        
-        Task {
-            do {
-                let (seriesEntryData, seriesData) = try await self.useCase.getSeries(hero: hero)
-                self.seriesModel = seriesEntryData
-                self.series = seriesData
-                self.status = .home
-            } catch {
-                let errorMessage = errorMessage(for: error)
-                self.status = .errorView(error: errorMessage)
-                NSLog(errorMessage)
+        DispatchQueue.main.async {
+            Task {
+                do {
+                    let (seriesEntryData, seriesData) = try await self.useCase.getSeries(hero: hero)
+                    self.seriesModel = seriesEntryData
+                    self.series = seriesData
+                    self.status = .home
+                } catch {
+                    let errorMessage = errorMessage(for: error)
+                    self.status = .errorView(error: errorMessage)
+                    NSLog(errorMessage)
+                }
             }
         }
     }

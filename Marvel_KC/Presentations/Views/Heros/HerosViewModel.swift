@@ -24,7 +24,6 @@ final class HerosViewModel: ObservableObject {
     }
     
     // MARK: Public Functions
-    @MainActor
     func getHeros() {
         self.status = .loadingView
         

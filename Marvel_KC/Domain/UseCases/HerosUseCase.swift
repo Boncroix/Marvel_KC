@@ -38,7 +38,7 @@ final class HerosUseCaseFake: HerosUseCaseProtocol {
     var repository: HerosRepositoryProtocol
     
     // MARK: - Inits
-    init(repository: HerosRepositoryProtocol = HerosRepository(network: NetworkHeros())) {
+    init(repository: HerosRepositoryProtocol = HerosRepository(network: NetworkHerosFake())) {
         self.repository = repository
     }
     

@@ -11,7 +11,7 @@ import SwiftUI
 struct RootView: View {
     
     // MARK: Properties
-    @StateObject var viewModel: HerosViewModel
+    @EnvironmentObject var viewModel: HerosViewModel
         
     // MARK: View
     var body: some View {
@@ -21,20 +21,27 @@ struct RootView: View {
                 .onAppear {
                     viewModel.getHeros()
                 }
+                .id(0)
         case .loadingView:
             LoadingView()
+                .id(1)
         case .home:
-            HerosListView(viewModel: viewModel)
+            HerosListView().environmentObject(viewModel)
+                .id(2)
         case .errorView(error: let errorString):
             ErrorView(error: errorString) {
                 viewModel.status = .none
             }
+            .id(3)
         }
     }
 }
 
 
 // MARK: - Preview
-#Preview {
-    RootView(viewModel: HerosViewModel())
-}
+/*
+ #Preview {
+     RootView(viewModel: HerosViewModel())
+ }
+ */
+

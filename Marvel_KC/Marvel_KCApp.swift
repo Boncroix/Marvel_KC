@@ -14,7 +14,7 @@ struct Marvel_KCApp: App {
     // MARK: View
     var body: some Scene {
         WindowGroup {
-            RootView(viewModel: HerosViewModel())
+            RootView().environmentObject(HerosViewModel())
         }
     }
 }

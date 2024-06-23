@@ -12,25 +12,33 @@ import MarvelAppLibrary
 struct LoadingView: View {
     
     // MARK: Properties
-    @State private var rotationAngle: Double = 0
-    @State private var textOpacity: Double = 1.0
-    @State private var timer: Timer?
+    @State var rotationAngle: Double = 0
+    @State var textOpacity: Double = 1.0
+    @State var timer: Timer?
+    
+    #if os(watchOS)
+        private let width = WKInterfaceDevice.current().screenBounds.width / 2.5
+    #else
+        private let width = UIScreen.main.bounds.width / 2.5
+    #endif
 
     // MARK: View
     var body: some View {
         ZStack {
             BackgroundSubView(opatity: 0.4)
+                .id(0)
             loadingSubView
+                .id(1)
         }
     }
     
     // MARK: SubViews
-    private var loadingSubView: some View {
+    var loadingSubView: some View {
         VStack(spacing: 0) {
             Image("LKC")
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width / 2.5,
-                       height: UIScreen.main.bounds.width / 2.5)
+                .frame(width: width,
+                       height: width)
                 .rotationEffect(.degrees(rotationAngle))
                 .onAppear {
                     startTimer()
@@ -39,6 +47,7 @@ struct LoadingView: View {
                     stopTimer()
                 }
                 .animation(.easeInOut(duration: 0.2), value: rotationAngle)
+                .id(2)
 
             Text(NSLocalizedString("Loading...", comment: ""))
                 .font(AppFonts().textL)
@@ -49,17 +58,18 @@ struct LoadingView: View {
                         self.textOpacity = 0.0
                     }
                 }
+                .id(3)
         }
     }
     
     // MARK: Private Funtions
-    private func startTimer() {
+    func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.rotationAngle += 22.5
         }
     }
 
-    private func stopTimer() {
+    func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
