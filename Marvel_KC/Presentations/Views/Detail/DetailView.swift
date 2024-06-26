@@ -13,10 +13,10 @@ struct DetailView: View {
     
     // MARK: Properties
     var hero: Hero
-    @StateObject var viewModel: DetailViewModel
+    @EnvironmentObject var viewModel: DetailViewModel
     
     #if os(watchOS)
-        private let height = WKInterfaceDevice.current().screenBounds.height / 3
+        private let height = WKInterfaceDevice.current().screenBounds.height / 2
         private let width = WKInterfaceDevice.current().screenBounds.width - 16
     #else
         private let height = UIScreen.main.bounds.height / 3
@@ -110,6 +110,6 @@ struct DetailView: View {
         viewModelFake.getSeries(hero: character1)
     }
     
-    return DetailView(hero: character1, viewModel: viewModelFake)
+    return DetailView(hero: character1).environmentObject(viewModelFake)
 }
 

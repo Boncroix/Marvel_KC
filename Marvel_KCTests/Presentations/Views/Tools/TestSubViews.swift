@@ -12,7 +12,6 @@
 
 final class BackgroundSubViewTests: XCTestCase {
     
-    @Environment(\.colorScheme) var colorScheme
     
     // MARK: - testBackgroundSubView
     func testBackgroundSubView() throws {

@@ -12,7 +12,6 @@ import MarvelAppLibrary
 struct ErrorView: View {
     
     // MARK: Properties
-    @Environment(\.colorScheme) var colorScheme
     var error: String
     var closure: (() -> Void)?
     
@@ -41,7 +40,7 @@ struct ErrorView: View {
                 .id(0)
             
             LinearGradient(
-                colors: [AppColors(colorScheme: colorScheme).whiteBlack, .clear],
+                colors: [Color(.black), .clear],
                 startPoint: .bottom,
                 endPoint: .top
                 )

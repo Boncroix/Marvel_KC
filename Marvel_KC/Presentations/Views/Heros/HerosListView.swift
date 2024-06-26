@@ -32,8 +32,8 @@ struct HerosListView: View {
                 ScrollView {
                     ForEach(viewModel.heros) { hero in
                         NavigationLink(
-                            destination: DetailView(
-                                hero: hero, viewModel: DetailViewModel()),
+                            destination: DetailView(hero: hero)
+                                .environmentObject(DetailViewModel()),
                             label: { HerosRowView(hero: hero)
                             })
                         .id(1)

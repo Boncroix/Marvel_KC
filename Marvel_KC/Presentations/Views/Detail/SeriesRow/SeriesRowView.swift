@@ -12,7 +12,6 @@ import MarvelAppLibrary
 struct SeriesRowView: View {
     
     // MARK: Properties
-    @Environment(\.colorScheme) var colorScheme
     private var serie: Serie
     
     #if os(watchOS)
@@ -44,7 +43,7 @@ struct SeriesRowView: View {
             }
             
             LinearGradient(
-                colors: [AppColors(colorScheme: colorScheme).whiteBlack, .clear],
+                colors: [Color(.black), .clear],
                 startPoint: .bottom,
                 endPoint: .center
                 )
@@ -58,7 +57,7 @@ struct SeriesRowView: View {
                     .font(AppFonts().textXS)
                     .bold()
                     .padding()
-                .foregroundStyle(AppColors(colorScheme: colorScheme).blackWhite)
+                    .foregroundStyle(Color(.white))
                 .id(3)
             }
         }

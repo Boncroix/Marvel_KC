@@ -12,7 +12,6 @@ import MarvelAppLibrary
 struct BackgroundSubView: View {
     
     // MARK: Properties
-    @Environment(\.colorScheme) var colorScheme
     let opatity: Double
     
     // MARK: Init
@@ -27,7 +26,7 @@ struct BackgroundSubView: View {
             Image("backgroud")
                 .resizable()
                 .id(0)
-            Color(AppColors(colorScheme: colorScheme).whiteBlack.opacity(opatity))
+            Color(Color(.black).opacity(opatity))
                 .id(1)
         }
         .ignoresSafeArea()
@@ -37,14 +36,11 @@ struct BackgroundSubView: View {
 // MARK: PlaceHolderImage
 struct PlaceHolderImage: View {
     
-    // MARK: Propreties
-    @Environment(\.colorScheme) var colorScheme
-    
     // MARK: View
     var body: some View {
         Image(systemName: "photo")
             .resizable()
-            .foregroundColor(AppColors(colorScheme: colorScheme).whiteBlack)
+            .foregroundColor(Color(.black))
             .id(0)
     }
 }

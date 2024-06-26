@@ -26,6 +26,7 @@ final class DetailViewModel: ObservableObject {
     // MARK: Public Functions
     func getSeries(hero: Hero) {
         self.status = .loadingView
+        
         DispatchQueue.main.async {
             Task {
                 do {

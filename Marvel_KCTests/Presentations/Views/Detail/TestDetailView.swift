@@ -17,7 +17,8 @@ final class TestDetailView: XCTestCase {
     func testDetailView() async throws {
         let viewModel = DetailViewModel(useCaseSeries: SeriesUseCaseFake())
         XCTAssertNotNil(viewModel)
-        let view = DetailView(hero: character1, viewModel: viewModel)
+        let view = DetailView(hero: character1)
+            .environmentObject(viewModel)
         XCTAssertNotNil(view)
         
         viewModel.status = .none
