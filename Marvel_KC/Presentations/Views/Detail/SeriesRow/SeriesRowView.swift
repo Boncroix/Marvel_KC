@@ -15,8 +15,8 @@ struct SeriesRowView: View {
     private var serie: Serie
     
     #if os(watchOS)
-        private let height = WKInterfaceDevice.current().screenBounds.height / 4
-        private let width = WKInterfaceDevice.current().screenBounds.width / 3
+        private let height = WKInterfaceDevice.current().screenBounds.height / 2
+        private let width = WKInterfaceDevice.current().screenBounds.width / 2
     #else
         private let height = UIScreen.main.bounds.height/4
         private let width = UIScreen.main.bounds.width/3
